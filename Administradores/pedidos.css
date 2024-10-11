@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+/* Estilos de la barra lateral */
+.sidebar {
+    height: 100vh;
+    width: 200px; /* Ancho inicial */
+    background-color: #004d4d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-img {
+    width: 80%; /* Tamaño grande cuando la barra está desplegada */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    transition: width 0.3s, height 0.3s;
+}
+
+
+
+.sidebar a {
+    padding: 15px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.sidebar a:hover {
+    background-color: #007a7a;
+}
+
+.sidebar i {
+    margin-right: 10px;
+}
+
+.closebtn {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+    background: none;
+    border: none;
+}
+
+/* Estilos del contenido principal */
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #e49adb;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+
+.navbar span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.welcome {
+    font-size: 16px;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.main-image {
+    width: 300px;
+    height: auto;
+    margin: 20px auto;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+/* Ajustes para la barra lateral colapsada */
+#sidebar {
+    width: 200px;
+    transition: width 0.3s;
+}
+
+#sidebar[style="width: 50px;"] .link-text {
+    display: none;
+}
+
+.main-content {
+    margin-left: 200px;
+    transition: margin-left 0.3s;
+}
+
+#sidebar[style="width: 50px;"] ~ .main-content {
+    margin-left: 50px;
+}
+
+
+
